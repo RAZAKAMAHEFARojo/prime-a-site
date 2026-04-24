@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-primea-violet: #4b00c9;
+  --color-primea-violet-dark: #24005a;
+  --color-primea-green: #7ed000;
+  --color-primea-green-light: #a6ff00;
+  --color-primea-orange: #ff6a00;
+  --color-primea-ink: #2b2b2b;
+  --color-primea-muted: #6e6e73;
+  --color-primea-soft: #f4f1fb;
+  --color-primea-line: #e7e1f5;
+  --shadow-soft: 0 22px 60px rgba(36, 0, 90, 0.08);
+  --shadow-card: 0 14px 36px rgba(36, 0, 90, 0.08);
+  --font-sans: "Manrope", "Segoe UI", sans-serif;
+  --font-display: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply m-0 overflow-x-hidden bg-white font-sans text-primea-ink antialiased;
+    background-image:
+      radial-gradient(circle at top left, rgba(75, 0, 201, 0.08), transparent 30%),
+      radial-gradient(circle at 90% 20%, rgba(126, 208, 0, 0.12), transparent 22%),
+      linear-gradient(180deg, #ffffff 0%, #fbfafe 55%, #ffffff 100%);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .card-surface {
+    @apply rounded-[28px] border border-primea-line bg-white shadow-[var(--shadow-card)];
+  }
+
+  .section-grid {
+    @apply grid gap-6 lg:grid-cols-2 lg:items-center;
+  }
+
+  .primary-button {
+    @apply inline-flex items-center justify-center rounded-full bg-primea-violet px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-primea-violet-dark;
+  }
+
+  .secondary-button {
+    @apply inline-flex items-center justify-center rounded-full border border-primea-line bg-white px-6 py-3 text-sm font-semibold text-primea-violet transition duration-300 hover:-translate-y-0.5 hover:border-primea-violet hover:text-primea-violet-dark;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center rounded-full border border-primea-line bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-primea-violet-dark;
+  }
+
+  .reveal {
+    @apply translate-y-5 opacity-0 transition duration-700 ease-out;
+  }
+
+  .reveal.is-visible {
+    @apply translate-y-0 opacity-100;
+  }
+
+  .primea-mark-top {
+    background: linear-gradient(135deg, #7b3cff 0%, #4b00c9 100%);
+    transform: skewX(12deg) rotate(34deg);
+    box-shadow: 0 10px 24px rgba(75, 0, 201, 0.18);
+  }
+
+  .primea-mark-left {
+    background: linear-gradient(180deg, #6a22e8 0%, #24005a 100%);
+    clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 64%);
+    box-shadow: 0 14px 30px rgba(36, 0, 90, 0.22);
+  }
+
+  .primea-mark-right {
+    background: linear-gradient(180deg, #9cf000 0%, #6dc700 100%);
+    clip-path: polygon(0 30%, 100% 0, 100% 64%, 0 100%);
+    box-shadow: 0 14px 30px rgba(126, 208, 0, 0.22);
+  }
+}
