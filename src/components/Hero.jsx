@@ -12,8 +12,8 @@ function Hero() {
               Conseil comptable, financier et digital pour mieux piloter votre entreprise
             </h1>
             <p className="max-w-2xl text-base leading-8 text-primea-muted sm:text-lg">
-              Prime A accompagne les dirigeants, directions financières et organisations
-              dans l’amélioration de leur gestion, de leur performance et de leurs systèmes
+              Prime A accompagne les dirigeants et directions financières dans
+              l’amélioration de leur gestion, de leur performance et de leurs systèmes
               d’information.
             </p>
           </div>
@@ -44,18 +44,18 @@ function Hero() {
         <Reveal className="card-surface overflow-hidden bg-white">
           <div className="border-b border-primea-line px-6 py-5">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primea-muted">
-              Pilotage financier
+              Pilotage de performance
             </p>
             <h2 className="mt-2 font-display text-2xl font-semibold text-primea-violet-dark">
-              Visibilité renforcée sur la performance
+              Un visuel de gestion pensé pour les directions
             </h2>
           </div>
           <div className="grid gap-5 p-6">
             <div className="grid gap-4 sm:grid-cols-3">
               {[
-                ['Trésorerie', 'À jour'],
-                ['Reporting', 'Fiabilisé'],
-                ['Pilotage', 'Structuré'],
+                ['Rentabilité', '+12 %'],
+                ['Trésorerie', 'Sous contrôle'],
+                ['Reporting', 'Mensuel'],
               ].map(([label, value], index) => (
                 <div
                   className={`rounded-[24px] p-5 ${
@@ -71,31 +71,53 @@ function Hero() {
               ))}
             </div>
 
-            <div className="rounded-[28px] bg-primea-violet-dark p-6 text-white">
-              <p className="text-xs uppercase tracking-[0.18em] text-white/60">
-                Exemple d’intervention
-              </p>
-              <div className="mt-4 grid gap-4">
+            <div className="rounded-[28px] border border-primea-line bg-white p-6">
+              <div className="mb-5 flex items-center justify-between gap-4">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.18em] text-primea-muted">
+                    Tableau de bord financier
+                  </p>
+                  <h3 className="mt-2 font-display text-xl font-semibold text-primea-violet-dark">
+                    Suivi de la rentabilité et du cash
+                  </h3>
+                </div>
+                <span className="rounded-full bg-primea-soft px-3 py-1 text-xs font-semibold text-primea-violet-dark">
+                  Vue direction
+                </span>
+              </div>
+              <div className="flex h-44 items-end gap-3">
+                {[42, 56, 51, 68, 63, 76, 84].map((height, index) => (
+                  <div className="flex-1" key={height}>
+                    <div
+                      className={`rounded-t-[18px] ${
+                        index === 5 ? 'bg-primea-green' : index === 6 ? 'bg-primea-violet-dark' : 'bg-primea-violet'
+                      }`}
+                      style={{ height: `${height}%` }}
+                    />
+                  </div>
+                ))}
+              </div>
+              <div className="mt-5 grid gap-3 sm:grid-cols-3">
                 {[
-                  'Organisation comptable et revue des processus',
-                  'Tableaux de bord de gestion et reporting financier',
-                  'Automatisation ciblée des traitements et rapprochements',
+                  'Suivi de trésorerie',
+                  'Reporting financier automatisé',
+                  'Indicateurs clés à jour',
                 ].map((item) => (
-                  <div className="rounded-[20px] bg-white/8 px-4 py-3 text-sm leading-6" key={item}>
+                  <div className="rounded-[18px] bg-primea-soft px-4 py-3 text-sm text-primea-ink" key={item}>
                     {item}
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="rounded-[28px] bg-primea-soft p-6">
-              <p className="text-xs uppercase tracking-[0.18em] text-primea-muted">
-                Positionnement Prime A
+            <div className="rounded-[28px] bg-primea-violet-dark p-6 text-white">
+              <p className="text-xs uppercase tracking-[0.18em] text-white/60">
+                Lecture Prime A
               </p>
-              <p className="mt-3 text-sm leading-7 text-primea-ink">
-                L’IT, la digitalisation et l’automatisation sont abordées comme des leviers
-                au service de la comptabilité, de la finance, du management et du pilotage
-                global de l’entreprise.
+              <p className="mt-3 text-sm leading-7 text-white/85">
+                Les outils de pilotage sont conçus pour aider la direction à mieux suivre la
+                performance, fiabiliser les données et accélérer les arbitrages, avec une
+                esthétique sobre et professionnelle.
               </p>
             </div>
           </div>

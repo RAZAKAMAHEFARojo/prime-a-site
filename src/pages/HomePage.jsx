@@ -10,6 +10,7 @@ import ServiceCard from '../components/ServiceCard.jsx'
 import {
   caseStudies,
   differentiators,
+  digitalSolutions,
   expertiseDomains,
   methodSteps,
   serviceHighlights,
@@ -23,18 +24,18 @@ function HomePage() {
       <section className="container-shell py-10 sm:py-14">
         <div className="section-grid gap-8">
           <SectionTitle
-            eyebrow="Prime A"
-            title="Un cabinet de conseil pour mieux structurer la gestion et la performance"
-            description="Prime A accompagne les entreprises dans l’amélioration de leur gestion, de leur performance financière, de leur organisation et de leurs outils digitaux, avec une logique de cabinet de conseil et non d’agence informatique."
+            eyebrow="Positionnement"
+            title="Un cabinet de conseil au croisement de la finance, du management et du digital"
+            description="Prime A est un cabinet de conseil spécialisé en comptabilité, finance, management et systèmes d’information. Nous aidons les entreprises à fiabiliser leurs données, structurer leur organisation et piloter leur performance grâce à une approche combinant expertise financière et outils digitaux."
           />
           <Reveal className="card-surface bg-primea-soft p-8">
-            <p className="text-sm uppercase tracking-[0.18em] text-primea-muted">Présentation</p>
+            <p className="text-sm uppercase tracking-[0.18em] text-primea-muted">Prime A</p>
             <div className="mt-5 grid gap-4 sm:grid-cols-2">
               {[
                 ['Rigueur', 'Une méthode structurée inspirée des cabinets de conseil, d’audit et d’expertise.'],
                 ['Confidentialité', 'Une attention particulière aux données financières, comptables et opérationnelles.'],
-                ['Proximité', 'Un accompagnement adapté aux dirigeants, DAF, PME, groupes et directions générales.'],
-                ['Résultats concrets', 'Des livrables, outils et plans d’action utiles au pilotage quotidien.'],
+                ['Pilotage', 'Des indicateurs, reportings et processus conçus pour aider la décision.'],
+                ['Digital utile', 'Des outils mobilisés au service de la gestion, jamais comme une fin en soi.'],
               ].map(([title, text]) => (
                 <div className="rounded-[24px] bg-white p-5" key={title}>
                   <p className="font-display text-lg font-semibold text-primea-violet-dark">{title}</p>
@@ -64,7 +65,7 @@ function HomePage() {
         <SectionTitle
           eyebrow="Services principaux"
           title="Des interventions conçues pour la gestion, le contrôle et la performance"
-          description="Quelques exemples de missions récurrentes menées auprès des directions financières, des directions générales et des organisations en transformation."
+          description="Des services structurés pour aider les entreprises à mieux fiabiliser leurs données, organiser leurs flux et piloter leurs indicateurs."
         />
         <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {serviceHighlights.map((service, index) => (
@@ -80,10 +81,38 @@ function HomePage() {
 
       <section className="container-shell py-10 sm:py-14">
         <SectionTitle
+          eyebrow="Solutions mises en place"
+          title="Des solutions concrètes pour mieux piloter"
+          description="Prime A conçoit et met en place des outils de gestion utiles aux directions financières et aux dirigeants."
+        />
+        <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {digitalSolutions.map((item, index) => (
+            <Reveal className="card-surface p-5" key={item}>
+              <div className="flex items-start gap-4">
+                <span
+                  className={`mt-1 flex h-10 w-10 items-center justify-center rounded-2xl text-sm font-bold text-white ${
+                    index % 3 === 1
+                      ? 'bg-primea-green'
+                      : index % 3 === 2
+                        ? 'bg-primea-orange'
+                        : 'bg-primea-violet'
+                  }`}
+                >
+                  {index + 1}
+                </span>
+                <p className="text-sm leading-7 text-primea-ink">{item}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      <section className="container-shell py-10 sm:py-14">
+        <SectionTitle
           align="center"
           eyebrow="Méthode"
-          title="Une démarche d’accompagnement claire et maîtrisée"
-          description="Chaque mission est pensée pour sécuriser le cadrage, l’exécution et l’appropriation par les équipes."
+          title="Une méthode structurée, pragmatique et orientée résultats"
+          description="Chaque mission est pensée pour sécuriser le diagnostic, structurer les priorités et déployer des solutions concrètes."
         />
         <div className="mt-10 grid gap-6 lg:grid-cols-4">
           {methodSteps.map((step, index) => (
@@ -95,8 +124,8 @@ function HomePage() {
       <section className="container-shell py-10 sm:py-14">
         <SectionTitle
           eyebrow="Cas d’usage"
-          title="Des exemples concrets de missions orientées pilotage"
-          description="Prime A intervient sur des sujets de gestion, de reporting, de rapprochement de données et de structuration des processus."
+          title="Cas d’usage"
+          description="Des exemples concrets de sujets traités pour améliorer la qualité de l’information, la rapidité du reporting et le pilotage financier."
         />
         <div className="mt-10 grid gap-6 xl:grid-cols-2">
           {caseStudies.slice(0, 4).map((study) => (
@@ -114,8 +143,8 @@ function HomePage() {
         <SectionTitle
           align="center"
           eyebrow="Pourquoi choisir Prime A"
-          title="Une approche crédible, sobre et pluridisciplinaire"
-          description="Le positionnement Prime A repose sur la rigueur, la compréhension des réalités opérationnelles et la mise en œuvre de solutions utiles."
+          title="Pourquoi choisir Prime A ?"
+          description="Le cabinet se distingue par une approche pluridisciplinaire, une lecture concrète des enjeux opérationnels et des solutions directement applicables."
         />
         <div className="mt-10 grid gap-4 lg:grid-cols-2">
           {differentiators.map((item) => (
@@ -137,15 +166,12 @@ function HomePage() {
             <div>
               <p className="text-xs uppercase tracking-[0.18em] text-primea-muted">Prochaine étape</p>
               <h2 className="mt-3 font-display text-3xl font-semibold text-primea-violet-dark">
-                Clarifier vos enjeux comptables, financiers, organisationnels et digitaux
+                Vous souhaitez améliorer votre gestion, fiabiliser vos données ou digitaliser vos processus ?
               </h2>
             </div>
             <div className="flex flex-wrap gap-4">
               <Link className="primary-button" to="/contact">
                 Demander un diagnostic
-              </Link>
-              <Link className="secondary-button" to="/services">
-                Découvrir nos services
               </Link>
             </div>
           </div>

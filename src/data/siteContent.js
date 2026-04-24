@@ -11,45 +11,45 @@ export const expertiseDomains = [
   {
     title: 'Conseil comptable',
     description:
-      'Sécuriser l’organisation comptable, fiabiliser les données et renforcer la qualité des reportings.',
+      'Organisation et fiabilisation de la fonction comptable, amélioration des processus et accompagnement à la clôture.',
     accent: 'violet',
   },
   {
     title: 'Finance & performance',
     description:
-      'Mettre les indicateurs financiers au service d’une lecture claire de la rentabilité, du cash et des priorités.',
+      'Mise en place de tableaux de bord, analyse financière, suivi de rentabilité et pilotage des indicateurs clés.',
     accent: 'green',
   },
   {
     title: 'Management & organisation',
     description:
-      'Structurer les responsabilités, les procédures et les modes de pilotage pour mieux exécuter.',
+      'Structuration des responsabilités, optimisation des processus et accompagnement au changement.',
     accent: 'orange',
   },
   {
     title: 'IT & digitalisation',
     description:
-      'Utiliser les systèmes d’information, les tableaux de bord et l’automatisation comme leviers de gestion.',
+      'Déploiement de solutions digitales pour automatiser, fiabiliser et accélérer le traitement des données.',
     accent: 'violet',
   },
 ]
 
 export const serviceHighlights = [
   {
-    title: 'Organisation comptable',
-    description: 'Structuration des flux, des rôles et des contrôles pour une base comptable plus fiable.',
+    title: 'Tableaux de bord de gestion',
+    description: 'Des vues de pilotage claires pour suivre la rentabilité, les flux, les écarts et les priorités.',
   },
   {
-    title: 'Analyse financière',
-    description: 'Lecture des marges, des équilibres financiers et des zones de vigilance utiles aux dirigeants.',
+    title: 'Reporting financier automatisé',
+    description: 'Des reportings plus rapides et plus fiables grâce à l’automatisation des consolidations et contrôles.',
   },
   {
-    title: 'Optimisation des processus',
-    description: 'Simplification et formalisation des circuits de travail pour fluidifier l’exécution.',
+    title: 'Suivi de trésorerie',
+    description: 'Une meilleure visibilité sur le cash, les échéances et les arbitrages à court terme.',
   },
   {
-    title: 'Tableaux de bord interactifs',
-    description: 'Outils de suivi pensés pour le pilotage, pas pour l’affichage technologique.',
+    title: 'Automatisation Excel et processus',
+    description: 'Des traitements fiabilisés pour réduire les ressaisies et accélérer la production d’information.',
   },
 ]
 
@@ -135,22 +135,22 @@ export const methodSteps = [
   {
     title: 'Diagnostic',
     description:
-      'Compréhension des enjeux de gestion, de performance, d’organisation et de système d’information.',
+      'Analyse de votre organisation, de vos données et de vos outils existants.',
   },
   {
-    title: 'Cadrage',
+    title: 'Structuration',
     description:
-      'Définition des priorités, des objectifs, des livrables et du niveau d’accompagnement adapté.',
+      'Mise en place de processus clairs et d’indicateurs pertinents.',
   },
   {
     title: 'Mise en œuvre',
     description:
-      'Déploiement progressif des solutions, des outils et des ajustements de processus utiles au pilotage.',
+      'Déploiement d’outils, automatisation des tâches et amélioration du système d’information.',
   },
   {
     title: 'Appropriation',
     description:
-      'Accompagnement des équipes, sécurisation des usages et ancrage des nouvelles pratiques dans la durée.',
+      'Suivi, ajustement et montée en compétence des équipes.',
   },
 ]
 
@@ -173,40 +173,40 @@ export const digitalSolutions = [
 
 export const caseStudies = [
   {
-    title: 'Mise en place d’un tableau de bord de pilotage financier',
+    title: 'Pilotage financier',
     problem:
-      'La direction ne dispose pas d’une vision consolidée, régulière et exploitable de la performance.',
+      'Le suivi de la rentabilité, de la trésorerie et des indicateurs clés manque de visibilité.',
     solution:
-      'Construction d’un tableau de bord regroupant indicateurs financiers, activité, trésorerie et marges.',
+      'Mise en place d’un tableau de bord permettant de suivre la rentabilité, la trésorerie et les indicateurs clés en temps réel.',
     result:
-      'Un pilotage plus réactif, des arbitrages facilités et une lecture commune des priorités.',
+      'Une lecture plus claire de la performance et des décisions plus rapides.',
   },
   {
-    title: 'Automatisation du reporting mensuel',
+    title: 'Automatisation du reporting',
     problem:
-      'Les équipes passent trop de temps à consolider des fichiers hétérogènes pour produire le reporting.',
+      'La production mensuelle des reportings mobilise trop de manipulations manuelles.',
     solution:
-      'Automatisation des consolidations, contrôles et restitutions à partir des sources existantes.',
+      'Réduction du temps de production des reportings mensuels grâce à l’automatisation des traitements.',
     result:
-      'Un reporting plus rapide, plus fiable et moins consommateur de temps administratif.',
+      'Des reportings plus rapides, plus fiables et moins consommateurs de ressources.',
   },
   {
-    title: 'Digitalisation du suivi des véhicules et engins',
+    title: 'Rapprochement automatisé',
     problem:
-      'Le suivi opérationnel et financier du parc repose sur des tableaux dispersés et peu à jour.',
+      'Les écarts entre outil métier et comptabilité génèrent des pertes de temps et des risques d’erreur.',
     solution:
-      'Mise en place d’un outil de suivi centralisé avec indicateurs de disponibilité, coût et utilisation.',
+      'Connexion entre logiciel métier et comptabilité pour fiabiliser les données et gagner du temps.',
     result:
-      'Une meilleure visibilité sur l’exploitation et une base plus solide pour les décisions de gestion.',
+      'Une donnée plus cohérente et un contrôle plus fluide entre les systèmes.',
   },
   {
-    title: 'Rapprochement automatisé entre logiciel métier et comptabilité',
+    title: 'Digitalisation documentaire',
     problem:
-      'Les écarts entre données métier et comptables créent des ressaisies, des retards et des zones de doute.',
+      'Les factures et documents PDF sont encore traités manuellement.',
     solution:
-      'Conception d’un rapprochement automatisé avec règles de contrôle et gestion des anomalies.',
+      'Extraction automatique de données depuis des factures et documents PDF via OCR.',
     result:
-      'Une donnée plus cohérente entre les systèmes et des contrôles plus rapides.',
+      'Des traitements plus rapides et une baisse des ressaisies manuelles.',
   },
   {
     title: 'Extraction OCR de données depuis des PDF',
