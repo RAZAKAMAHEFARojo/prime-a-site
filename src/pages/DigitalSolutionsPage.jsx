@@ -1,41 +1,49 @@
 import CTA from '../components/CTA.jsx'
-import CapabilityShowcase from '../components/CapabilityShowcase.jsx'
 import PageHero from '../components/PageHero.jsx'
 import Reveal from '../components/Reveal.jsx'
 import SectionTitle from '../components/SectionTitle.jsx'
+import { digitalSolutions } from '../data/siteContent.js'
 
 function DigitalSolutionsPage() {
   return (
     <>
       <PageHero
-        description="Prime A conçoit des solutions digitales comme des prolongements de la stratégie d’organisation et de pilotage. L’outil vient après le besoin, avec un souci constant de simplicité d’usage et de fiabilité."
         eyebrow="Solutions digitales"
-        title="Des outils concrets pour mieux voir, mieux traiter et mieux décider"
+        title="Des solutions digitales au service de la gestion et de la performance"
+        description="Prime A présente le digital comme un levier de pilotage comptable, financier et opérationnel. Les outils sont conçus pour améliorer la qualité de l’information, simplifier les traitements et soutenir la décision."
       />
 
       <section className="container-shell py-10 sm:py-14">
         <div className="section-grid gap-8">
           <SectionTitle
-            description="Nos solutions couvrent les tableaux de bord, les workflows documentaires, l’automatisation de tâches, l’OCR et les outils internes utiles à la coordination des équipes."
             eyebrow="Ce que nous concevons"
-            title="Des solutions sobres, solides et orientées usage"
+            title="Des solutions concrètes pour mieux suivre, rapprocher et exploiter la donnée"
+            description="Les dispositifs mis en place sont pensés comme des outils de gestion, de reporting financier et de fluidification des processus."
           />
-          <CapabilityShowcase />
+          <Reveal className="card-surface bg-primea-soft p-8">
+            <ul className="grid gap-3 text-sm leading-7 text-primea-ink">
+              {digitalSolutions.map((item) => (
+                <li className="rounded-[22px] bg-white px-4 py-3" key={item}>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
         </div>
       </section>
 
       <section className="container-shell py-10 sm:py-14">
         <SectionTitle
           align="center"
-          description="Le bon outil digital n’est pas un gadget. Il clarifie la donnée, fluidifie les traitements et fait gagner du temps sur les sujets répétitifs."
           eyebrow="Principes"
-          title="Comment nous abordons la digitalisation"
+          title="Une logique de gestion avant une logique technologique"
+          description="Le digital est mobilisé pour fiabiliser, rapprocher, automatiser et mieux piloter. Les outils sont sélectionnés pour leur utilité en gestion et en reporting, jamais pour un effet technologique."
         />
         <div className="mt-10 grid gap-6 lg:grid-cols-3">
           {[
-            ['Comprendre le flux', 'Nous partons des acteurs, des données et des points de friction existants.'],
-            ['Simplifier avant d’automatiser', 'Nous évitons de figer un mauvais processus dans un outil.'],
-            ['Assurer l’adoption', 'Les interfaces, restitutions et contrôles sont pensés pour les usages réels.'],
+            ['Pilotage financier', 'Les tableaux de bord et reportings servent d’abord la lecture des performances, des marges et du cash.'],
+            ['Automatisation ciblée', 'Les automatisations sont retenues lorsqu’elles réduisent les ressaisies, les délais ou les risques d’erreur.'],
+            ['Système d’information utile', 'Les connexions entre Excel, bases de données et outils métiers visent la cohérence de l’information de gestion.'],
           ].map(([title, text]) => (
             <Reveal className="card-surface p-6" key={title}>
               <p className="font-display text-2xl font-semibold text-primea-violet-dark">{title}</p>

@@ -29,7 +29,7 @@ function Navbar() {
 
         <div className="hidden lg:block">
           <Link className="inline-flex items-center justify-center rounded-2xl bg-primea-green px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-primea-green/90" to="/contact">
-            Demander une démo
+            Demander un diagnostic
           </Link>
         </div>
 
@@ -72,7 +72,7 @@ function Navbar() {
               onClick={() => setIsOpen(false)}
               to="/contact"
             >
-              Demander une démo
+              Demander un diagnostic
             </Link>
           </div>
         </div>

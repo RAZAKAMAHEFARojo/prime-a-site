@@ -1,6 +1,6 @@
 import { Link } from 'react-router'
-import BrandLogo from './BrandLogo.jsx'
 import { navigationItems } from '../data/siteContent.js'
+import BrandLogo from './BrandLogo.jsx'
 
 function Footer() {
   return (
@@ -9,8 +9,8 @@ function Footer() {
         <div className="space-y-4">
           <BrandLogo />
           <p className="max-w-xl text-sm leading-7 text-primea-muted">
-            Cabinet de conseil hybride au croisement de l’organisation, de la finance et de la
-            mise en œuvre d’outils concrets pour le pilotage.
+            Cabinet de conseil hybride en conseil comptable, finance, management,
+            digitalisation et systèmes d’information.
           </p>
         </div>
 
@@ -30,7 +30,7 @@ function Footer() {
           <div className="mt-4 grid gap-3 text-sm text-primea-muted">
             <p>prima.auditsarl@gmail.com</p>
             <p>+261 34 04 086 80</p>
-            <p>Diagnostic, structuration et accompagnement sur mesure</p>
+            <p>Conseil comptable, financier, organisationnel et digital</p>
           </div>
         </div>
       </div>

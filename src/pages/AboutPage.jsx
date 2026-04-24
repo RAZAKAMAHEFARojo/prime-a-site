@@ -7,25 +7,25 @@ function AboutPage() {
   return (
     <>
       <PageHero
-        description="Prime A est né d’un constat simple : les entreprises ont besoin à la fois d’un regard structurant sur leur performance et d’une capacité réelle à mettre en œuvre les outils qui soutiennent leurs décisions."
         eyebrow="À propos"
-        title="Un cabinet de conseil hybride, entre exigence méthodologique et mise en œuvre terrain"
+        title="Une approche pluridisciplinaire entre rigueur financière, organisation et systèmes d’information"
+        description="Prime A intervient comme cabinet de conseil auprès des entreprises qui souhaitent mieux structurer leur gestion, améliorer leur performance et faire évoluer leurs outils avec méthode."
       />
 
       <section className="container-shell py-10 sm:py-14">
         <div className="section-grid gap-8">
           <SectionTitle
-            description="Nous intervenons avec les codes d’un cabinet de conseil : analyse, cadrage, priorisation et accompagnement des décideurs. Notre différence est de pouvoir prolonger cette mission par la conception d’outils internes, de tableaux de bord et d’automatisations utiles."
             eyebrow="Positionnement"
-            title="Ni simple agence digitale, ni conseil déconnecté de l’exécution"
+            title="Un cabinet hybride, au croisement du comptable, du financier, du management et du digital"
+            description="Prime A ne sépare pas les enjeux de pilotage financier, d’organisation et de système d’information. Le cabinet intervient avec une compréhension fine des réalités opérationnelles et de la donnée de gestion."
           />
           <Reveal className="card-surface p-8">
             <div className="grid gap-5 sm:grid-cols-2">
               {[
-                ['Méthodes claires', 'Analyse de l’existant, qualification des enjeux et feuille de route progressive.'],
-                ['Culture du résultat', 'Chaque intervention vise des gains de lisibilité, de fiabilité ou de temps.'],
-                ['Discrétion', 'Nous traitons souvent des sujets de performance, de gestion et d’information sensibles.'],
-                ['Approche sur mesure', 'Le niveau d’outillage dépend du contexte, pas d’un standard imposé.'],
+                ['Rigueur comptable et financière', 'Une attention forte à la qualité de l’information et à la fiabilité des flux.'],
+                ['Réalisme opérationnel', 'Une lecture concrète des contraintes terrain, des circuits de décision et des responsabilités.'],
+                ['IT comme levier', 'Les outils digitaux sont mobilisés pour mieux gérer, mieux suivre et mieux décider.'],
+                ['Confidentialité', 'Les sujets traités sont souvent sensibles et demandent discrétion et méthode.'],
               ].map(([title, text]) => (
                 <div className="rounded-[24px] bg-primea-soft p-5" key={title}>
                   <p className="font-display text-lg font-semibold text-primea-violet-dark">{title}</p>
@@ -40,16 +40,15 @@ function AboutPage() {
       <section className="container-shell py-10 sm:py-14">
         <SectionTitle
           align="center"
-          description="Une intervention Prime A suit une logique simple, rassurante et actionnable."
-          eyebrow="Notre méthode"
-          title="Comprendre, structurer, déployer, accompagner"
+          eyebrow="Ce qui nous caractérise"
+          title="Une posture de proximité, avec un niveau d’exigence élevé"
+          description="Prime A accompagne les dirigeants et directions avec un souci constant de lisibilité, de discrétion et d’efficacité."
         />
-        <div className="mt-10 grid gap-6 lg:grid-cols-4">
+        <div className="mt-10 grid gap-6 lg:grid-cols-3">
           {[
-            ['1. Diagnostic', 'Analyse de l’organisation, des flux, des indicateurs et des irritants.'],
-            ['2. Cadrage', 'Définition des priorités, des objectifs et des arbitrages utiles.'],
-            ['3. Mise en œuvre', 'Construction des tableaux de bord, automatisations ou outils internes.'],
-            ['4. Accompagnement', 'Montée en compétence des équipes et ajustements progressifs.'],
+            ['Accompagnement de proximité', 'Une relation de travail directe, lisible et adaptée au contexte de l’entreprise.'],
+            ['Méthode structurée', 'Un cadrage clair, des priorités assumées et une exécution progressive.'],
+            ['Solutions utiles', 'Des recommandations concrètes, éventuellement prolongées par des outils réellement nécessaires.'],
           ].map(([title, text]) => (
             <Reveal className="card-surface p-6" key={title}>
               <p className="font-display text-2xl font-semibold text-primea-violet-dark">{title}</p>

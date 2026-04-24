@@ -15,11 +15,11 @@ function BrandLogo({ to = '/', compact = false }) {
         </span>
         {!compact ? (
           <span className="mt-1 block text-xs text-primea-muted sm:text-sm">
-            Gestion intelligente, performance durable
+            Conseil comptable, financier et digital
           </span>
         ) : (
           <span className="mt-1 hidden text-[11px] uppercase tracking-[0.18em] text-primea-muted sm:block">
-            Conseil & performance
+            Conseil, finance & pilotage
           </span>
         )}
       </span>

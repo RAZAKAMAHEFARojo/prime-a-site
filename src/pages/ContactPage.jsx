@@ -6,26 +6,31 @@ function ContactPage() {
   return (
     <>
       <PageHero
-        description="Vous pouvez utiliser ce formulaire pour une première prise de contact. Il est volontairement statique à ce stade et pourra ensuite être relié à l’outil de votre choix."
         eyebrow="Contact"
-        title="Parlons de vos enjeux d’organisation, de pilotage ou de digitalisation"
+        title="Échangeons sur vos enjeux de gestion, de pilotage et de digitalisation"
+        description="Vous souhaitez améliorer votre gestion, fiabiliser vos données ou digitaliser vos processus ? Contactez Prime A pour un premier échange."
       />
 
       <section className="container-shell py-10 sm:py-14">
         <div className="section-grid gap-8">
           <Reveal className="card-surface p-8">
             <h2 className="font-display text-3xl font-semibold text-primea-violet-dark">
-              Demande de diagnostic
+              Formulaire de contact
             </h2>
-            <form
-              className="mt-8 grid gap-5"
-              onSubmit={(event) => event.preventDefault()}
-            >
+            <form className="mt-8 grid gap-5" onSubmit={(event) => event.preventDefault()}>
               <label className="grid gap-2 text-sm font-medium text-primea-ink">
                 Nom
                 <input
                   className="rounded-2xl border border-primea-line px-4 py-3 outline-none transition focus:border-primea-violet"
                   placeholder="Votre nom"
+                  type="text"
+                />
+              </label>
+              <label className="grid gap-2 text-sm font-medium text-primea-ink">
+                Société
+                <input
+                  className="rounded-2xl border border-primea-line px-4 py-3 outline-none transition focus:border-primea-violet"
+                  placeholder="Nom de votre société"
                   type="text"
                 />
               </label>
@@ -38,18 +43,26 @@ function ContactPage() {
                 />
               </label>
               <label className="grid gap-2 text-sm font-medium text-primea-ink">
-                Entreprise
+                Téléphone
                 <input
                   className="rounded-2xl border border-primea-line px-4 py-3 outline-none transition focus:border-primea-violet"
-                  placeholder="Nom de l’entreprise"
+                  placeholder="+261 00 000 00"
+                  type="tel"
+                />
+              </label>
+              <label className="grid gap-2 text-sm font-medium text-primea-ink">
+                Sujet
+                <input
+                  className="rounded-2xl border border-primea-line px-4 py-3 outline-none transition focus:border-primea-violet"
+                  placeholder="Objet de votre demande"
                   type="text"
                 />
               </label>
               <label className="grid gap-2 text-sm font-medium text-primea-ink">
-                Votre besoin
+                Message
                 <textarea
                   className="min-h-36 rounded-2xl border border-primea-line px-4 py-3 outline-none transition focus:border-primea-violet"
-                  placeholder="Quelques lignes sur votre contexte, vos priorités ou les outils envisagés"
+                  placeholder="Présentez brièvement votre contexte, vos enjeux ou le type d’accompagnement recherché."
                 />
               </label>
               <button className="primary-button w-fit" type="submit">
@@ -69,17 +82,17 @@ function ContactPage() {
                   <span className="font-semibold text-primea-ink">Téléphone :</span> +254 700 000 000
                 </p>
                 <p>
-                  <span className="font-semibold text-primea-ink">Disponibilité :</span> Diagnostic,
-                  mission ciblée ou accompagnement global
+                  <span className="font-semibold text-primea-ink">Positionnement :</span> conseil comptable,
+                  financier, management, systèmes d’information et digitalisation
                 </p>
               </div>
             </div>
             <div className="card-surface bg-primea-soft p-6">
-              <p className="text-xs uppercase tracking-[0.18em] text-primea-muted">Ce que nous privilégions</p>
+              <p className="text-xs uppercase tracking-[0.18em] text-primea-muted">Premiers sujets abordés</p>
               <ul className="mt-4 space-y-3 text-sm leading-7 text-primea-ink">
-                <li>Un premier cadrage simple et confidentiel</li>
-                <li>Une formulation claire des enjeux métier</li>
-                <li>Des recommandations pragmatiques et proportionnées</li>
+                <li>Fiabilisation des données comptables et financières</li>
+                <li>Organisation du reporting et du pilotage de performance</li>
+                <li>Digitalisation et automatisation de processus de gestion</li>
               </ul>
             </div>
           </Reveal>
