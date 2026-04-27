@@ -24,10 +24,9 @@
 
   body {
     @apply m-0 overflow-x-hidden bg-white font-sans text-primea-ink antialiased;
-    background-image:
-      radial-gradient(circle at top left, rgba(75, 0, 201, 0.08), transparent 30%),
-      radial-gradient(circle at 90% 20%, rgba(126, 208, 0, 0.12), transparent 22%),
-      linear-gradient(180deg, #ffffff 0%, #fbfafe 55%, #ffffff 100%);
+    background:
+      radial-gradient(circle at top left, rgba(75, 0, 201, 0.05), transparent 28%),
+      linear-gradient(180deg, #fbfbfe 0%, #ffffff 38%, #fafafd 100%);
   }
 
   * {
@@ -53,6 +52,21 @@
     @apply rounded-[28px] border border-primea-line bg-white shadow-[var(--shadow-card)];
   }
 
+  .section-band-soft {
+    @apply border-y border-primea-line bg-gradient-to-b from-white to-primea-soft/60;
+  }
+
+  .section-band-dark {
+    background:
+      radial-gradient(circle at 10% 10%, rgba(126, 208, 0, 0.12), transparent 20%),
+      radial-gradient(circle at 90% 20%, rgba(75, 0, 201, 0.16), transparent 22%),
+      linear-gradient(135deg, #1d1432 0%, #24005a 55%, #1c1234 100%);
+  }
+
+  .section-panel {
+    @apply rounded-[32px] border border-white/10 bg-white/6 shadow-[var(--shadow-soft)] backdrop-blur-sm;
+  }
+
   .section-grid {
     @apply grid gap-6 lg:grid-cols-2 lg:items-center;
   }
@@ -67,6 +81,10 @@
 
   .eyebrow {
     @apply inline-flex items-center rounded-full border border-primea-line bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-primea-violet-dark;
+  }
+
+  .eyebrow-dark {
+    @apply inline-flex items-center rounded-full border border-white/15 bg-white/8 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white;
   }
 
   .reveal {

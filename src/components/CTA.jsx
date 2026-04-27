@@ -4,11 +4,12 @@ import Reveal from './Reveal.jsx'
 function CTA() {
   return (
     <Reveal>
-      <section className="container-shell py-10 sm:py-14">
-        <div className="card-surface overflow-hidden bg-primea-violet-dark px-6 py-10 text-white sm:px-10 lg:px-14">
-          <div className="section-grid gap-8">
+      <section className="py-10 sm:py-14">
+        <div className="container-shell">
+          <div className="overflow-hidden rounded-[32px] bg-gradient-to-r from-primea-violet via-primea-violet-dark to-primea-violet px-6 py-10 text-white shadow-[0_28px_90px_rgba(36,0,90,0.26)] sm:px-10 lg:px-14">
+            <div className="section-grid gap-8">
             <div className="space-y-4">
-              <span className="eyebrow border-white/15 bg-white/10 text-white">
+              <span className="eyebrow-dark">
                 Premier échange
               </span>
               <h2 className="font-display text-3xl font-semibold sm:text-4xl">
@@ -34,6 +35,7 @@ function CTA() {
               </Link>
             </div>
           </div>
+        </div>
         </div>
       </section>
     </Reveal>

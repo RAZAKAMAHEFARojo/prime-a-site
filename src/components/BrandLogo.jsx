@@ -1,6 +1,6 @@
 import { Link } from 'react-router'
 
-function BrandLogo({ to = '/', compact = false }) {
+function BrandLogo({ to = '/', compact = false, inverse = false }) {
   return (
     <Link className="inline-flex min-w-0 items-center gap-2.5 sm:gap-3" to={to}>
       <span className="primea-mark relative block h-12 w-12 shrink-0 sm:h-14 sm:w-14">
@@ -10,15 +10,15 @@ function BrandLogo({ to = '/', compact = false }) {
       </span>
       <span className="min-w-0">
         <span className="flex items-baseline gap-1.5 font-display text-2xl font-bold leading-none sm:gap-2 sm:text-3xl">
-          <span className="text-primea-violet">Prime</span>
+          <span className={inverse ? 'text-white' : 'text-primea-violet'}>Prime</span>
           <span className="text-primea-green">A</span>
         </span>
         {!compact ? (
-          <span className="mt-1 block text-xs text-primea-muted sm:text-sm">
+          <span className={`mt-1 block text-xs sm:text-sm ${inverse ? 'text-white/70' : 'text-primea-muted'}`}>
             Conseil comptable, financier et digital
           </span>
         ) : (
-          <span className="mt-1 hidden text-[11px] uppercase tracking-[0.18em] text-primea-muted sm:block">
+          <span className={`mt-1 hidden text-[11px] uppercase tracking-[0.18em] sm:block ${inverse ? 'text-white/70' : 'text-primea-muted'}`}>
             Conseil, finance & pilotage
           </span>
         )}

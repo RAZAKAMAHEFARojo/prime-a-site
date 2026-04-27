@@ -21,33 +21,35 @@ function HomePage() {
     <>
       <Hero />
 
-      <section className="container-shell py-10 sm:py-14">
-        <div className="section-grid gap-8">
-          <SectionTitle
-            eyebrow="Positionnement"
-            title="Un cabinet de conseil au croisement de la finance, du management et du digital"
-            description="Prime A est un cabinet de conseil spécialisé en comptabilité, finance, management et systèmes d’information. Nous aidons les entreprises à fiabiliser leurs données, structurer leur organisation et piloter leur performance grâce à une approche combinant expertise financière et outils digitaux."
-          />
-          <Reveal className="card-surface bg-primea-soft p-8">
-            <p className="text-sm uppercase tracking-[0.18em] text-primea-muted">Prime A</p>
-            <div className="mt-5 grid gap-4 sm:grid-cols-2">
-              {[
-                ['Rigueur', 'Une méthode structurée inspirée des cabinets de conseil, d’audit et d’expertise.'],
-                ['Confidentialité', 'Une attention particulière aux données financières, comptables et opérationnelles.'],
-                ['Pilotage', 'Des indicateurs, reportings et processus conçus pour aider la décision.'],
-                ['Digital utile', 'Des outils mobilisés au service de la gestion, jamais comme une fin en soi.'],
-              ].map(([title, text]) => (
-                <div className="rounded-[24px] bg-white p-5" key={title}>
-                  <p className="font-display text-lg font-semibold text-primea-violet-dark">{title}</p>
-                  <p className="mt-2 text-sm leading-7 text-primea-muted">{text}</p>
-                </div>
-              ))}
-            </div>
-          </Reveal>
+      <section className="section-band-soft">
+        <div className="container-shell py-12 sm:py-16">
+          <div className="section-grid gap-8">
+            <SectionTitle
+              eyebrow="Positionnement"
+              title="Un cabinet de conseil au croisement de la finance, du management et du digital"
+              description="Prime A est un cabinet de conseil spécialisé en comptabilité, finance, management et systèmes d’information. Nous aidons les entreprises à fiabiliser leurs données, structurer leur organisation et piloter leur performance grâce à une approche combinant expertise financière et outils digitaux."
+            />
+            <Reveal className="card-surface bg-primea-soft p-8">
+              <p className="text-sm uppercase tracking-[0.18em] text-primea-muted">Prime A</p>
+              <div className="mt-5 grid gap-4 sm:grid-cols-2">
+                {[
+                  ['Rigueur', 'Une méthode structurée inspirée des cabinets de conseil, d’audit et d’expertise.'],
+                  ['Confidentialité', 'Une attention particulière aux données financières, comptables et opérationnelles.'],
+                  ['Pilotage', 'Des indicateurs, reportings et processus conçus pour aider la décision.'],
+                  ['Digital utile', 'Des outils mobilisés au service de la gestion, jamais comme une fin en soi.'],
+                ].map(([title, text]) => (
+                  <div className="rounded-[24px] bg-white p-5" key={title}>
+                    <p className="font-display text-lg font-semibold text-primea-violet-dark">{title}</p>
+                    <p className="mt-2 text-sm leading-7 text-primea-muted">{text}</p>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 
-      <section className="container-shell py-10 sm:py-14">
+      <section className="container-shell py-12 sm:py-16">
         <SectionTitle
           align="center"
           eyebrow="Domaines d’intervention"
@@ -61,25 +63,29 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="container-shell py-10 sm:py-14">
+      <section className="section-band-dark">
+        <div className="container-shell py-12 sm:py-16">
         <SectionTitle
+          inverse
+          align="center"
           eyebrow="Services principaux"
           title="Des interventions conçues pour la gestion, le contrôle et la performance"
-          description="Des services structurés pour aider les entreprises à mieux fiabiliser leurs données, organiser leurs flux et piloter leurs indicateurs."
-        />
-        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {serviceHighlights.map((service, index) => (
-            <ServiceCard
-              key={service.title}
-              title={service.title}
-              description={service.description}
-              accent={index === 1 ? 'green' : index === 2 ? 'orange' : 'violet'}
-            />
-          ))}
+            description="Des services structurés pour aider les entreprises à mieux fiabiliser leurs données, organiser leurs flux et piloter leurs indicateurs."
+          />
+          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {serviceHighlights.map((service, index) => (
+              <ServiceCard
+                key={service.title}
+                title={service.title}
+                description={service.description}
+                accent={index === 1 ? 'green' : index === 2 ? 'orange' : 'violet'}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="container-shell py-10 sm:py-14">
+      <section className="container-shell py-12 sm:py-16">
         <SectionTitle
           eyebrow="Solutions mises en place"
           title="Des solutions concrètes pour mieux piloter"
@@ -107,21 +113,23 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="container-shell py-10 sm:py-14">
-        <SectionTitle
-          align="center"
-          eyebrow="Méthode"
-          title="Une méthode structurée, pragmatique et orientée résultats"
-          description="Chaque mission est pensée pour sécuriser le diagnostic, structurer les priorités et déployer des solutions concrètes."
-        />
-        <div className="mt-10 grid gap-6 lg:grid-cols-4">
-          {methodSteps.map((step, index) => (
-            <MethodStep key={step.title} index={index + 1} {...step} />
-          ))}
+      <section className="section-band-soft">
+        <div className="container-shell py-12 sm:py-16">
+          <SectionTitle
+            align="center"
+            eyebrow="Méthode"
+            title="Une méthode structurée, pragmatique et orientée résultats"
+            description="Chaque mission est pensée pour sécuriser le diagnostic, structurer les priorités et déployer des solutions concrètes."
+          />
+          <div className="mt-10 grid gap-6 lg:grid-cols-4">
+            {methodSteps.map((step, index) => (
+              <MethodStep key={step.title} index={index + 1} {...step} />
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="container-shell py-10 sm:py-14">
+      <section className="container-shell py-12 sm:py-16">
         <SectionTitle
           eyebrow="Cas d’usage"
           title="Cas d’usage"
@@ -139,24 +147,26 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="container-shell py-10 sm:py-14">
-        <SectionTitle
-          align="center"
-          eyebrow="Pourquoi choisir Prime A"
-          title="Pourquoi choisir Prime A ?"
-          description="Le cabinet se distingue par une approche pluridisciplinaire, une lecture concrète des enjeux opérationnels et des solutions directement applicables."
-        />
-        <div className="mt-10 grid gap-4 lg:grid-cols-2">
-          {differentiators.map((item) => (
-            <Reveal className="card-surface p-6" key={item}>
-              <div className="flex gap-4">
-                <span className="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-primea-violet text-sm font-semibold text-white">
-                  +
-                </span>
-                <p className="text-sm leading-7 text-primea-ink">{item}</p>
-              </div>
-            </Reveal>
-          ))}
+      <section className="section-band-soft">
+        <div className="container-shell py-12 sm:py-16">
+          <SectionTitle
+            align="center"
+            eyebrow="Pourquoi choisir Prime A"
+            title="Pourquoi choisir Prime A ?"
+            description="Le cabinet se distingue par une approche pluridisciplinaire, une lecture concrète des enjeux opérationnels et des solutions directement applicables."
+          />
+          <div className="mt-10 grid gap-4 lg:grid-cols-2">
+            {differentiators.map((item) => (
+              <Reveal className="card-surface p-6" key={item}>
+                <div className="flex gap-4">
+                  <span className="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-primea-violet text-sm font-semibold text-white">
+                    +
+                  </span>
+                  <p className="text-sm leading-7 text-primea-ink">{item}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
